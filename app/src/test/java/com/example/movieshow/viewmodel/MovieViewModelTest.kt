@@ -10,7 +10,7 @@ class MovieViewModelTest : TestCase() {
 
     @Before
     override fun setUp(){
-        viewModel = MovieViewModel()
+        viewModel = MovieViewModel(movieCatalogueRepository)
     }
 
     @Test

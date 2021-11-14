@@ -46,7 +46,7 @@ class TvshowListAdapter: RecyclerView.Adapter<TvshowListAdapter.TvshowViewHolder
                 tvItemTitleTv.text = tv.judul
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DetailTvActivity::class.java)
-                    intent.putExtra(DetailActivity.EXTRA_COURSE, tv.tvshowId)
+//                    intent.putExtra(DetailActivity.EXTRA_COURSE, tv.tvshowId)
                     itemView.context.startActivity(intent)
                 }
                 Glide.with(itemView.context)

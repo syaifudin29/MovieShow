@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movieshow.R
 import com.example.movieshow.databinding.FragmentMovieBinding
 import com.example.movieshow.viewmodel.MovieViewModel
+import com.example.movieshow.viewmodel.ViewModelFactory
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -49,11 +50,15 @@ class MovieFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         if (activity != null) {
 
-            val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[MovieViewModel::class.java]
-            val movies = viewModel.getMovies()
-
+            val factory = ViewModelFactory.getInstance(requireActivity())
+            val viewModel = ViewModelProvider(this, factory)[MovieViewModel::class.java]
             val movieAdapter = MovieListAdapter()
-            movieAdapter.setMoview(movies)
+            val movies = viewModel.getMovies().observe(viewLifecycleOwner, {movies ->
+                movieAdapter.setMoview(movies)
+            })
+
+
+
             with(fragmentMovieBinding.rvMovie) {
                 layoutManager = GridLayoutManager(context,2)
                 setHasFixedSize(true)

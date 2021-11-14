@@ -10,63 +10,63 @@ object DataDummy {
         val movie = ArrayList<MovieEntity>()
 
         movie.add(MovieEntity(
-            "a1",
+            11,
             "Keramat",
             "Keramat merupakan film horor dari Indonesia yang dirilis pada tahun 2009, disutradarai oleh Monty Tiwa. Film ini dibintangi antara lain oleh Poppy Sovia, Migi Parahita, Sadha Triyudha, Miea Kusuma, Dimas Projosujadi, Diaz Ardiawan, dan Brama Sutasara. Film ini syuting tanpa menggunakan skenario film. Jadi di dalam film ini, apapun yang dilakukan oleh tim produksi selalu ditangani oleh tim Moviesta Pictures dan Monty Tiwa sendiri.",
             "https://upload.wikimedia.org/wikipedia/id/thumb/b/ba/Keramat_poster_2009.jpg/220px-Keramat_poster_2009.jpg"
                 ))
         movie.add(MovieEntity(
-            "a2",
+            12,
             "Pengabdi Setan (film 1980)",
             "Pengabdi Setan (Internasional: Satan's Slave) adalah sebuah film horor tahun 1980 dari Indonesia yang disutradarai oleh Sisworo Gautama Putra. Film ini sangat terkenal pada masanya bahkan sampai di dunia internasional, dirilis dalam berbagai format seperti VHS dan kemudian DVD di berbagai negara seperti Amerika Serikat, Eropa dan Jepang.",
             "https://upload.wikimedia.org/wikipedia/id/3/3c/Pengabdi_Setan_%281980%3B_obverse%3B_wiki%29.jpg"
         ))
         movie.add(MovieEntity(
-            "a3",
+            13,
             "Danur I Can See Ghosts",
             "Danur (rilis internasional:Danur: I Can See Ghosts) merupakan film hantu Indonesia yang dirilis pada 30 Maret 2017 disutradarai oleh Awi Suryadi. Film ini diangkat dari buku karya Risa Saraswati, Gerbang Dialog Danur yang ditulis berdasarkan pengalamannya sendiri sebagai seorang gadis indigo. Film ini dibintangi oleh Prilly Latuconsina, Sandrinna Michelle, Shareefa Daanish, Indra Brotolaras, dan Kinaryosih serta memiliki jumlah penonton sebanyak 2.736.391 orang.",
             "https://upload.wikimedia.org/wikipedia/id/thumb/0/09/Danur_poster.jpg/220px-Danur_poster.jpg"
         ))
         movie.add(MovieEntity(
-            "a4",
+            14,
             "Kalung Jailangkung",
             "Kalung Jailangkung adalah film horor Indonesia yang dirilis pada 2 Februari 2011 dengan disutradarai oleh Koya Pagayo yang dibintangi oleh Zacky Zimah dan Soraya Larasati.Kiki dan beberapa orang temannya mengisi liburan ke sebuah kampung di mana mereka bebas bermain apa saja disana, berenang di kali, mengembala kerbau dan lain-lain. Namun suatu hari, Kiki dkk bermain Jailangkung disebuah bangunan tua. Ditengah keasyikan main jalangkung, tiba-tiba Jalangkung bergerak-gerak keras sambil bersuara dan menyebut bahwa namanya Yanti yang mati terbunuh oleh pacarnya yang tidak bertanggungjawab atas kehamilannya.",
             "https://upload.wikimedia.org/wikipedia/id/thumb/1/13/Film24631b.jpg/220px-Film24631b.jpg"
 
         ))
         movie.add(MovieEntity(
-            "a5",
+            15,
             "Hantu Ambulance",
             "Hantu Ambulance adalah film horor Indonesia yang dirilis pada tahun 2008. Film yang disutradarai oleh Koya Pagayo ini dibintangi oleh Suzzanna, Dimas Andrean, Fitri Ayu, William Alvin, Ratna Galih, Clift Sangra, Cut Alona dan Gianina Emanuela. Film ini adalah film terakhir yang dibintangi Suzzanna sebelum ia wafat pada tanggal 15 Oktober pada tahun yang sama dengan tahun rilis film ini.",
             "https://upload.wikimedia.org/wikipedia/id/thumb/6/6e/Film-hantu-ambulance-200-ok.jpg/220px-Film-hantu-ambulance-200-ok.jpg"
         ))
         movie.add(MovieEntity(
-            "a6",
+            16,
             "Lewat Tengah Malam (film 2007)",
             "Lewat Tengah Malam adalah film horor Indonesia yang dirilis pada tahun 2007. Film yang disutradarai oleh Koya Pagayo ini dibintangi oleh Joanna Alexandra, Catherine Wilson, Andhika Pratama, Ichi Nuraini, Krisna Murti Wibowo, Fenita Z. Zawawi dan Renny Umari.",
             "https://upload.wikimedia.org/wikipedia/id/5/5e/POSTER_LTM.jpg"
         ))
         movie.add(MovieEntity(
-            "a7",
+            17,
             "Nakalnya Anak Muda",
             "Nakalnya Anak Muda merupakan film horor/seru/jagal Indonesia yang dirilis pada 29 Juli 2010 dengan disutradarai oleh Nayato Fio Nuala serta dibintangi antara lain oleh Ratu Felisha dan Uli Auliani.",
             "https://upload.wikimedia.org/wikipedia/id/thumb/1/1f/Nakalnya_Anak_Muda.jpg/220px-Nakalnya_Anak_Muda.jpg"
 
         ))
         movie.add(MovieEntity(
-            "a8",
+            18,
             "Kuntilanak Kamar Mayat",
             "Kuntilanak Kamar Mayat merupakan film Indonesia yang dirilis pada 19 Maret 2009. Film ini dibintangi antara lain oleh Julia Perez, Mandala Shoji, Rizky Mocil, Imelda Lubis, dan Uwie Jasmine.",
             "https://upload.wikimedia.org/wikipedia/id/thumb/b/b7/Kuntilanak_Kamar_Mayat.jpg/220px-Kuntilanak_Kamar_Mayat.jpg"
         ))
         movie.add(MovieEntity(
-            "a9",
+            19,
             "Kereta Hantu Manggarai",
             "Kereta Hantu Manggarai adalah film horor Indonesia yang dirilis pada tahun 2008. Film yang disutradarai oleh Nayato Fio Nuala ini dibintangi oleh Sheila Marcia, Melvin Giovanie, Stefanie Hariadi Theresia, Nadila Ernesta, Gianina Emanuela, Fendi Trihartanto dan Rina Hasyim.",
             "https://upload.wikimedia.org/wikipedia/id/thumb/6/6f/Hantu_Manggarai.jpg/220px-Hantu_Manggarai.jpg"
         ))
         movie.add(MovieEntity(
-            "a10",
+            10,
             "Kain Kafan Perawan",
             "Kain Kafan Perawan merupakan film hantu Indonesia yang dirilis pada 25 Februari 2010 yang disutradarai oleh Nayato Fio Nuala dan dibintangi antara lain oleh Ratu Felisha dan Ardina Rasti.",
             "https://upload.wikimedia.org/wikipedia/id/thumb/7/79/Film-kainkafanperawan.jpg/220px-Film-kainkafanperawan.jpg"

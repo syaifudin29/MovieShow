@@ -1,9 +1,18 @@
 package com.example.movieshow.viewmodel
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.movieshow.data.MovieEntity
+import com.example.movieshow.data.source.remote.MovieShowRepository
+import com.example.movieshow.data.source.remote.api.ApiConfig
+import com.example.movieshow.data.source.remote.response.MovieResponse
+import com.example.movieshow.data.source.remote.response.ResultsItem
 import com.example.movieshow.utils.DataDummy
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
-class MovieViewModel: ViewModel() {
-    fun getMovies(): List<MovieEntity> = DataDummy.generateDummyMoview()
+class MovieViewModel(private val movieCatalogueRepository: MovieShowRepository): ViewModel() {
+    fun getMovies() = movieCatalogueRepository.getMovies()
 }

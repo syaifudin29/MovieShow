@@ -40,14 +40,14 @@ class MovieListAdapter: RecyclerView.Adapter<MovieListAdapter.MoviesViewHolder>(
     class MoviesViewHolder(private val binding: ItemsMovieBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(movies: MovieEntity) {
             with(binding) {
-                tvItemTitle.text = movies.judul
+                tvItemTitle.text = movies.title
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DetailActivity::class.java)
-                    intent.putExtra(DetailActivity.EXTRA_COURSE, movies.movieId)
+//                    intent.putExtra(DetailActivity.EXTRA_COURSE, movies.movieId)
                     itemView.context.startActivity(intent)
                 }
                 Glide.with(itemView.context)
-                    .load(movies.gambar)
+                    .load(movies.posterPath)
                     .apply(RequestOptions.placeholderOf(R.drawable.ic_loading)
                         .error(R.drawable.ic_error))
                     .into(imgPoster)

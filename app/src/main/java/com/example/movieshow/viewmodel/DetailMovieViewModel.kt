@@ -8,19 +8,19 @@ class DetailMovieViewModel: ViewModel() {
     private lateinit var movieId: String
 
 
-    fun setSelectedMovie(moviewId: String) {
-        this.movieId = moviewId
-    }
+//    fun setSelectedMovie(moviewId: String) {
+//        this.movieId = moviewId
+//    }
 
-    fun getMovie(): MovieEntity {
-        lateinit var movie: MovieEntity
-        val movieEntitas = DataDummy.generateDummyMoview()
-        for (movieEntity in movieEntitas) {
-            if (movieEntity.movieId == movieId) {
-                movie = movieEntity
-            }
-        }
-        return movie
-    }
+//    fun getMovie(): MovieEntity {
+//        lateinit var movie: MovieEntity
+//        val movieEntitas = DataDummy.generateDummyMoview()
+//        for (movieEntity in movieEntitas) {
+//            if (movieEntity.movieId == movieId) {
+//                movie = movieEntity
+//            }
+//        }
+//        return movie
+//    }
 
 }
