@@ -4,6 +4,5 @@ data class TvEntity (
     var tvshowId: String,
     var judul: String,
     var keterangan: String,
-    var gambar: String,
-    var lain: String
+    var gambar: String
 )
