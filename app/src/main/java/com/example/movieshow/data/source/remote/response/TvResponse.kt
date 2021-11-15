@@ -41,7 +41,7 @@ data class ResultsItemv(
 	val popularity: Double,
 
 	@field:SerializedName("vote_average")
-	val voteAverage: Int,
+	val voteAverage: Double,
 
 	@field:SerializedName("name")
 	val name: String,

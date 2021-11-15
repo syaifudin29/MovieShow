@@ -2,6 +2,7 @@ package com.example.movieshow.data.source.remote.response
 
 import com.google.gson.annotations.SerializedName
 
+
 data class MovieResponse(
 
 	@field:SerializedName("page")

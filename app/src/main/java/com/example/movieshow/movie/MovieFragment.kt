@@ -1,6 +1,7 @@
 package com.example.movieshow.movie
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -52,9 +53,11 @@ class MovieFragment : Fragment() {
 
             val factory = ViewModelFactory.getInstance(requireActivity())
             val viewModel = ViewModelProvider(this, factory)[MovieViewModel::class.java]
+
             val movieAdapter = MovieListAdapter()
-            val movies = viewModel.getMovies().observe(viewLifecycleOwner, {movies ->
+            viewModel.getMovies().observe(viewLifecycleOwner, {movies ->
                 movieAdapter.setMoview(movies)
+                movieAdapter.notifyDataSetChanged()
             })
 
 

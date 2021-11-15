@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.movieshow.data.source.remote.MovieShowRepository
 import com.example.movieshow.di.Injection
 
-class ViewModelFactory private constructor(private val movieCatalogueRepository: MovieShowRepository) : ViewModelProvider.NewInstanceFactory() {
+class ViewModelFactory private constructor(private val movieShowRepository: MovieShowRepository) : ViewModelProvider.NewInstanceFactory() {
     companion object {
         @Volatile
         private var instance: ViewModelFactory? = null
@@ -20,11 +20,11 @@ class ViewModelFactory private constructor(private val movieCatalogueRepository:
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return when {
             modelClass.isAssignableFrom(MovieViewModel::class.java) -> {
-                MovieViewModel(movieCatalogueRepository) as T
+                MovieViewModel(movieShowRepository) as T
             }
-//            modelClass.isAssignableFrom(TvShowViewModel::class.java) -> {
-//                TvShowViewModel(movieCatalogueRepository) as T
-//            }
+            modelClass.isAssignableFrom(TvshowViewModel::class.java) -> {
+                TvshowViewModel(movieShowRepository) as T
+            }
 //            modelClass.isAssignableFrom(DetailViewModel::class.java) -> {
 //                DetailViewModel(movieCatalogueRepository) as T
 //            }

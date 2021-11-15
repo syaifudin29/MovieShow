@@ -6,12 +6,12 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class MovieEntity(
-    @SerializedName("id")
+//    @SerializedName("id")
     var id: Int,
-    @SerializedName("title")
+//    @SerializedName("title")
     var title: String,
-    @SerializedName("overview")
+//    @SerializedName("overview")
     var overview: String,
-    @SerializedName("posterPath")
+//    @SerializedName("posterPath")
     var posterPath: String
 ): Parcelable

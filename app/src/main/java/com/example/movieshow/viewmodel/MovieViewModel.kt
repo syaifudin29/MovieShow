@@ -13,6 +13,6 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MovieViewModel(private val movieCatalogueRepository: MovieShowRepository): ViewModel() {
-    fun getMovies() = movieCatalogueRepository.getMovies()
+class MovieViewModel(private val movieShowRepository: MovieShowRepository): ViewModel() {
+    fun getMovies() = movieShowRepository.getMovies()
 }

@@ -13,6 +13,7 @@ import com.example.movieshow.databinding.FragmentTvshowBinding
 import com.example.movieshow.movie.MovieListAdapter
 import com.example.movieshow.viewmodel.MovieViewModel
 import com.example.movieshow.viewmodel.TvshowViewModel
+import com.example.movieshow.viewmodel.ViewModelFactory
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -52,15 +53,19 @@ class TvshowFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         if (activity != null) {
 
-            val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[TvshowViewModel::class.java]
-            val tv = viewModel.getTvshow()
+            val factory = ViewModelFactory.getInstance(requireActivity())
+            val viewModel = ViewModelProvider(this, factory)[TvshowViewModel::class.java]
 
-            val tvshowListAdapter = TvshowListAdapter()
-            tvshowListAdapter.setMoview(tv)
+            val tvAdapter = TvshowListAdapter()
+            viewModel.getTv().observe(viewLifecycleOwner, {tv ->
+                tvAdapter.setTvshow(tv)
+                tvAdapter.notifyDataSetChanged()
+            })
+
             with(fragmentTvshowBinding.rvTv) {
                 layoutManager = GridLayoutManager(context,2)
                 setHasFixedSize(true)
-                adapter = tvshowListAdapter
+                adapter = tvAdapter
             }
         }
     }

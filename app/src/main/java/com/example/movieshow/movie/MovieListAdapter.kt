@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.example.movieshow.BuildConfig
 import com.example.movieshow.R
 import com.example.movieshow.data.MovieEntity
 import com.example.movieshow.databinding.ItemsMovieBinding
@@ -47,7 +48,7 @@ class MovieListAdapter: RecyclerView.Adapter<MovieListAdapter.MoviesViewHolder>(
                     itemView.context.startActivity(intent)
                 }
                 Glide.with(itemView.context)
-                    .load(movies.posterPath)
+                    .load(BuildConfig.IMAGE_URL + movies.posterPath)
                     .apply(RequestOptions.placeholderOf(R.drawable.ic_loading)
                         .error(R.drawable.ic_error))
                     .into(imgPoster)

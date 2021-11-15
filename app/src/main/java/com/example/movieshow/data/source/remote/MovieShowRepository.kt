@@ -4,7 +4,9 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.movieshow.data.MovieEntity
+import com.example.movieshow.data.TvEntity
 import com.example.movieshow.data.source.remote.response.ResultsItem
+import com.example.movieshow.data.source.remote.response.ResultsItemv
 
 class MovieShowRepository private constructor(private val remoteDataSource: RemoteDataSource) : MovieShowDataSource{
     companion object {
@@ -23,26 +25,39 @@ class MovieShowRepository private constructor(private val remoteDataSource: Remo
             override fun onMoviesLoaded(movies: List<ResultsItem>?) {
                 val movieList = ArrayList<MovieEntity>()
                 if (movies != null) {
-                    Log.d("Jerone", "a: 1")
                     for (response in movies) {
                         with(response) {
-//                            val movie = MovieEntity(id, title, overview, posterPath)
-//                            movieList.add(movie)
-//                            Log.d("Jerone", "${movieList}")
-//                            Log.d("Jerone", "${title}")
-//                            Log.d("Jerone", "${overview}")
-//                            Log.d("Jerone", "${posterPath}")
-                            Log.d("Jerone", "a: 2")
+                            val movie = MovieEntity(id, title, overview, posterPath)
+                            movieList.add(movie)
                         }
                     }
-                    Log.d("Jerone", "a: ${movieList}")
-//                    movieResult.setValue(movieList)
-
-                }else{
-                    Log.d("Jerone", "a: tidak ada")
+                    movieResult.postValue(movieList)
                 }
             }
         })
+
         return movieResult
+    }
+
+    override fun getTvs(): LiveData<List<TvEntity>> {
+        val tvResult = MutableLiveData<List<TvEntity>>()
+
+        remoteDataSource.getTvs(object : RemoteDataSource.LoadTvCallback {
+            override fun onTvLoaded(tv: List<ResultsItemv>?) {
+                val tvList = ArrayList<TvEntity>()
+                if (tv != null) {
+                    for (response in tv) {
+                        with(response) {
+                            val tvs = TvEntity(id, name, overview, posterPath)
+                            tvList.add(tvs)
+                            Log.d("gambar", "${posterPath}")
+                        }
+                    }
+                    tvResult.postValue(tvList)
+                }
+            }
+        })
+
+        return tvResult
     }
 }

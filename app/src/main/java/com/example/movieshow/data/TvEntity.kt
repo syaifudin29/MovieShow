@@ -1,8 +1,12 @@
 package com.example.movieshow.data
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class TvEntity (
-    var tvshowId: String,
-    var judul: String,
-    var keterangan: String,
-    var gambar: String
-)
+    var id: Int,
+    var name: String,
+    var overview: String,
+    var posterPath: String
+):Parcelable
